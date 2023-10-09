@@ -118,9 +118,24 @@ function SeleccionarAtaqueEnemigo(){
     } else if(ataqueAleatorio == 4){
         ataqueEnemigo = 'TIERRA'
     }  
-    crearMensaje()
+    combate()
 }
 
+function combate(){
+    if (ataqueJugador == ataqueEnemigo){
+        alert("EMPATE")
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AGUA'){
+        alert("GANASTE")
+    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
+        alert("PIERDES")
+    } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AIRE'){
+        alert("GANAS")
+    } else if (ataqueJugador == 'AIRE' && ataqueEnemigo == 'TIERRA'){
+        alert("PIERDES")
+    }
+
+    crearMensaje()
+}
 function crearMensaje(){
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')  //creamos un nuevo parrafo

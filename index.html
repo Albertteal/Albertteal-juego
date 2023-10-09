@@ -1,4 +1,62 @@
-<h1>Este es mi primer sitio web creado con Github Pages</h1>
-<p>y todo lo que haga aquí es resultado del aprendizaje en platzi </p>
-<p><img src ="https://media.tenor.com/QIuIj1-H7c4AAAAM/world-of-warcraft-warcraft.gif" /></p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos</title>
+        <script src="./JS/js.js"></script>
+    </head>
+    <body>
+        <h1>Elementos 🔥💧🌪🍃</h1>
+        
+        <section id ="Clase">
+            <h2>Elige tu clase</h2>
 
+            <input type="radio"name="clase"  id="Herbolestero"/>
+            <label for="Herbolestero">Herbolestero</label> <br>
+             
+            <input type="radio" name="clase" id="Monje"/> 
+            <label for="Monje">Monje</label> <br>
+           
+            <input type="radio" name="clase" id="Cataclismo"/>
+            <label for="Cataclismo">Cataclismo</label> <br>
+            
+            <input type="radio" name="clase" id="Nagas"/>
+            <label for="Nagas">Nagas</label> <br>
+            
+            <input type="radio" name="clase" id="Tauren"/>
+            <label for="Tauren">Tauren</label> <br>
+            
+            <input type="radio" name="clase" id="Hydros"/> 
+            <label for="Hydros">Hydros</label> <br>
+
+            <input type="radio" name="clase" id="Paladin"/> 
+            <label for="Paladin">Paladin</label> <br>
+            
+
+
+            <button id="boton-selec-clase">Seleccionar</button>
+        </section>
+        <section id ="Ataque">
+            <h2>Selecciona el ataque</h2>
+
+            <p>Tu clase <span id="claseJugador"></span>, tiene <span>3</span> vidas</p> 
+            <p>La clase  del enemigo es <span id="clase-enemigo"></span>, tiene<span>3</span> vidas</p> 
+            <P>
+                <button id="boton-ataque-fuego">Fuego 🔥</button>
+                <button id="boton-ataque-agua">Agua 💧</button>
+                <button id="boton-ataque-aire">Aire 🌪</button>
+                <button id="boton-ataque-planta">Planta 🍃 </button>
+                <button id="boton-ataque-sagrado">Sagrado ✝ </button>
+
+            </P>
+        </section>
+        <section id ="mensajes">
+            
+        </section>
+
+        <section id="reiniciar">
+            <button id="boton-reiniciar-juego">Reiniciar</button>
+        </section>
+    </body>
+</html>

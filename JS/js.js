@@ -13,10 +13,9 @@ function iniciarJuego(){
     botonAgua.addEventListener('click', ataqueAgua)
     let botonAire = document.getElementById('boton-ataque-aire')
     botonAire.addEventListener('click', ataqueAire)
-    let botonPlanta = document.getElementById('boton-ataque-planta')
-    botonPlanta.addEventListener('click', ataquePlanta)
-    let botonSagrado = document.getElementById('boton-ataque-sagrado')
-    botonSagrado.addEventListener('click', ataqueSagrado)
+    let botontierra = document.getElementById('boton-ataque-tierra')
+    botontierra.addEventListener('click', ataquetierra)
+
 }
 
 function SeleccionarClaseJugador(){
@@ -101,18 +100,14 @@ function ataqueAire(){
     SeleccionarAtaqueEnemigo()
 }
 
-function ataquePlanta(){
-    ataqueJugador = 'PLANTA'
+function ataquetierra(){
+    ataqueJugador = 'TIERRA'
     SeleccionarAtaqueEnemigo()
 }
 
-function ataqueSagrado(){
-    ataqueJugador = 'SAGRADO'
-    SeleccionarAtaqueEnemigo()
-}
 
 function SeleccionarAtaqueEnemigo(){
-    let ataqueAleatorio = aleatorio(1,5)
+    let ataqueAleatorio = aleatorio(1,4)
 
     if (ataqueAleatorio == 1){
         ataqueEnemigo = 'FUEGO'
@@ -121,10 +116,8 @@ function SeleccionarAtaqueEnemigo(){
     } else if(ataqueAleatorio == 3){
         ataqueEnemigo = 'AIRE'
     } else if(ataqueAleatorio == 4){
-        ataqueEnemigo = 'PLANTA'
-    }  else if(ataqueAleatorio == 5){
-        ataqueEnemigo = 'SAGRADO'
-    } 
+        ataqueEnemigo = 'TIERRA'
+    }  
     crearMensaje()
 }
 

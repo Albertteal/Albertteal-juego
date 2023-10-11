@@ -1,5 +1,7 @@
 let ataqueJugador
 let ataqueEnemigo
+let vidasJugador = 3
+let vidasEnemigo = 3
 
 
 function iniciarJuego(){
@@ -122,24 +124,40 @@ function SeleccionarAtaqueEnemigo(){
 }
 
 function combate(){
-    if (ataqueJugador == ataqueEnemigo){
-        alert("EMPATE")
-    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AGUA'){
-        alert("GANASTE")
-    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
-        alert("PIERDES")
-    } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AIRE'){
-        alert("GANAS")
-    } else if (ataqueJugador == 'AIRE' && ataqueEnemigo == 'TIERRA'){
-        alert("PIERDES")
-    }
+    let spanVidasJugador = document.getElementById ('vidasJugador')
+    let spanVidasEnemigo = document.getElementById ('vidasenemigo')
 
-    crearMensaje()
+    if (ataqueJugador == ataqueEnemigo){
+        crearMensaje("EMPATE")
+    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'TIERRA'){
+        crearMensaje("GANASTE")
+    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'AIRE'  || ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO' ){
+        crearMensaje("PERDISTE")
+
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AGUA' || ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AIRE'){
+        crearMensaje("GANASTE")
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
+        crearMensaje("PERDISTE")
+    } 
+
+    else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA' || ataqueJugador == 'TIERRA' && ataqueEnemigo == 'FUEGO'){
+        crearMensaje("GANASTE")
+    } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AIRE'){
+        crearMensaje("PERDISTE")
+    } 
+ 
+    else if (ataqueJugador == 'AIRE' && ataqueEnemigo == 'AGUA'  ){
+        crearMensaje("GANASTE")
+    } else if (ataqueJugador == 'AIRE' && ataqueEnemigo == 'FUEGO' || ataqueJugador == 'AIRE' && ataqueEnemigo == 'TIERRA'){
+        crearMensaje("PERDISTE")
+        spanVidasJugador.innerHTML =""
+    } 
+    
 }
-function crearMensaje(){
+function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')  //creamos un nuevo parrafo
-    parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + ',el enemigo atacó con' + ataqueEnemigo + '- PENDIENTE'
+    parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + ',el enemigo atacó con ' + ataqueEnemigo + ' ' + resultado
     sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
 }
 window.addEventListener('load', iniciarJuego) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado

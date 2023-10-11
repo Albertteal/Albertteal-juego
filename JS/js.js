@@ -125,32 +125,47 @@ function SeleccionarAtaqueEnemigo(){
 
 function combate(){
     let spanVidasJugador = document.getElementById ('vidasJugador')
-    let spanVidasEnemigo = document.getElementById ('vidasenemigo')
+    let spanVidasEnemigo = document.getElementById ('vidasEnemigo')
 
     if (ataqueJugador == ataqueEnemigo){
         crearMensaje("EMPATE")
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'TIERRA'){
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'AIRE'  || ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO' ){
         crearMensaje("PERDISTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
 
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AGUA' || ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AIRE'){
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
         crearMensaje("PERDISTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
     } 
 
     else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA' || ataqueJugador == 'TIERRA' && ataqueEnemigo == 'FUEGO'){
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AIRE'){
         crearMensaje("PERDISTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
     } 
  
     else if (ataqueJugador == 'AIRE' && ataqueEnemigo == 'AGUA'  ){
         crearMensaje("GANASTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador    
     } else if (ataqueJugador == 'AIRE' && ataqueEnemigo == 'FUEGO' || ataqueJugador == 'AIRE' && ataqueEnemigo == 'TIERRA'){
         crearMensaje("PERDISTE")
-        spanVidasJugador.innerHTML =""
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
     } 
     
 }

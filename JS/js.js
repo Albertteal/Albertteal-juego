@@ -18,7 +18,12 @@ function iniciarJuego(){
     let botontierra = document.getElementById('boton-ataque-tierra')
     botontierra.addEventListener('click', ataquetierra)
 
+    let BotonReinicio = document.getElementById('boton-reiniciar-juego')
+    BotonReinicio.addEventListener('click', reinicioJuego)
+
 }
+
+
 
 function SeleccionarClaseJugador(){
     let inputHerbolestero = document.getElementById('Herbolestero')
@@ -178,6 +183,10 @@ function revisarVidas(){
     else if (vidasJugador == 0){
         crearMensajeFinal("Perdiste")   
     }
+}
+
+function reinicioJuego(){
+    location.reload()
 }
 function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes')

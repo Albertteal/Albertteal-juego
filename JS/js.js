@@ -167,12 +167,28 @@ function combate(){
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } 
+    revisarVidas()
     
+}
+
+function revisarVidas(){
+    if (vidasEnemigo == 0 ){
+        crearMensajeFinal("Ganaste") 
+    }
+    else if (vidasJugador == 0){
+        crearMensajeFinal("Perdiste")   
+    }
 }
 function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')  //creamos un nuevo parrafo
     parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + ',el enemigo atacó con ' + ataqueEnemigo + ' ' + resultado
+    sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
+}
+function crearMensajeFinal(resultadoFinal){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')  //creamos un nuevo parrafo
+    parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
 }
 window.addEventListener('load', iniciarJuego) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado

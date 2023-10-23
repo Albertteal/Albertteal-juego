@@ -199,6 +199,15 @@ function crearMensajeFinal(resultadoFinal){
     let parrafo = document.createElement('p')  //creamos un nuevo parrafo
     parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
+
+    let botonFuego = document.getElementById('boton-ataque-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-ataque-agua')
+    botonAgua.disabled = true
+    let botonAire = document.getElementById('boton-ataque-aire')
+    botonAire.disabled = true
+    let botontierra = document.getElementById('boton-ataque-tierra')
+    botontierra.disabled = true
 }
 window.addEventListener('load', iniciarJuego) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado
                                                 //Todo el HTML y ahora sí pasamos al JS

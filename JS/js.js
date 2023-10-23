@@ -3,21 +3,35 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
-
-function iniciarJuego(){
-
+function ClaseSeleccionada(){
+    let botonFuego = document.getElementById('boton-ataque-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-ataque-agua')
+    botonAgua.disabled = true
+    let botonAire = document.getElementById('boton-ataque-aire')
+    botonAire.disabled = true
+    let botontierra = document.getElementById('boton-ataque-tierra')
+    botontierra.disabled = true
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
+    botonClaseJugador.addEventListener('click', iniciarJuego)
 
+}
+function iniciarJuego(){
+    
+    
     let botonFuego = document.getElementById('boton-ataque-fuego')
     botonFuego.addEventListener('click', ataqueFuego)
+    botonFuego.disabled = false
     let botonAgua = document.getElementById('boton-ataque-agua')
     botonAgua.addEventListener('click', ataqueAgua)
+    botonAgua.disabled = false
     let botonAire = document.getElementById('boton-ataque-aire')
     botonAire.addEventListener('click', ataqueAire)
+    botonAire.disabled = false
     let botontierra = document.getElementById('boton-ataque-tierra')
     botontierra.addEventListener('click', ataquetierra)
-
+    botontierra.disabled = false
     let BotonReinicio = document.getElementById('boton-reiniciar-juego')
     BotonReinicio.addEventListener('click', reinicioJuego)
 
@@ -209,5 +223,5 @@ function crearMensajeFinal(resultadoFinal){
     let botontierra = document.getElementById('boton-ataque-tierra')
     botontierra.disabled = true
 }
-window.addEventListener('load', iniciarJuego) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado
+window.addEventListener('load', ClaseSeleccionada) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado
                                                 //Todo el HTML y ahora sí pasamos al JS

@@ -28,8 +28,13 @@ function iniciarJuego(){
 
 
 function SeleccionarClaseJugador(){
+
+    let sectionSeleccionarClase = document.getElementById('Clase')
+    sectionSeleccionarClase.style.display = 'none'
+
     let sectionSeleccionarAtaque = document.getElementById('Ataque')
     sectionSeleccionarAtaque.style.display = 'block'
+
     let inputHerbolestero = document.getElementById('Herbolestero')
     let inputMonje = document.getElementById('Monje')
     let inputCataclismo = document.getElementById('Cataclismo')

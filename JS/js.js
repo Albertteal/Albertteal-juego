@@ -5,7 +5,9 @@ let vidasEnemigo = 3
 
 
 function iniciarJuego(){
-
+    let sectionSeleccionarAtaque = document.getElementById('Ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
+    
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
 
@@ -26,6 +28,8 @@ function iniciarJuego(){
 
 
 function SeleccionarClaseJugador(){
+    let sectionSeleccionarAtaque = document.getElementById('Ataque')
+    sectionSeleccionarAtaque.style.display = 'block'
     let inputHerbolestero = document.getElementById('Herbolestero')
     let inputMonje = document.getElementById('Monje')
     let inputCataclismo = document.getElementById('Cataclismo')

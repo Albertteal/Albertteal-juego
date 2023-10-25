@@ -3,7 +3,6 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
-<<<<<<< HEAD
 function ClaseSeleccionada(){
     let botonFuego = document.getElementById('boton-ataque-fuego')
     botonFuego.disabled = true

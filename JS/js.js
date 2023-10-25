@@ -15,7 +15,6 @@ function ClaseSeleccionada(){
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
     botonClaseJugador.addEventListener('click', iniciarJuego)
-//hiola
 }
 function iniciarJuego(){
     

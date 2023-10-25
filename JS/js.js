@@ -5,9 +5,12 @@ let vidasEnemigo = 3
 
 
 function iniciarJuego(){
-    let sectionSeleccionarAtaque = document.getElementById('Ataque')
+    let sectionSeleccionarAtaque = document.getElementById('reiniciar')
     sectionSeleccionarAtaque.style.display = 'none'
     
+    let sectionBotonReiniciar = document.getElementById('Ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
+
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
 
@@ -204,6 +207,9 @@ function crearMensaje(resultado){
     sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
 }
 function crearMensajeFinal(resultadoFinal){
+    let sectionSeleccionarAtaque = document.getElementById('reiniciar')
+    sectionSeleccionarAtaque.style.display = 'block'
+
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')  //creamos un nuevo parrafo
     parrafo.innerHTML = resultadoFinal

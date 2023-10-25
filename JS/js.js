@@ -3,6 +3,7 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
+<<<<<<< HEAD
 function ClaseSeleccionada(){
     let botonFuego = document.getElementById('boton-ataque-fuego')
     botonFuego.disabled = true
@@ -12,6 +13,16 @@ function ClaseSeleccionada(){
     botonAire.disabled = true
     let botontierra = document.getElementById('boton-ataque-tierra')
     botontierra.disabled = true
+=======
+
+function iniciarJuego(){
+    let sectionSeleccionarAtaque = document.getElementById('reiniciar')
+    sectionSeleccionarAtaque.style.display = 'none'
+    
+    let sectionBotonReiniciar = document.getElementById('Ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
+
+>>>>>>> BloqueoDeBotones
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
     botonClaseJugador.addEventListener('click', iniciarJuego)
@@ -40,6 +51,13 @@ function iniciarJuego(){
 
 
 function SeleccionarClaseJugador(){
+
+    let sectionSeleccionarClase = document.getElementById('Clase')
+    sectionSeleccionarClase.style.display = 'none'
+
+    let sectionSeleccionarAtaque = document.getElementById('Ataque')
+    sectionSeleccionarAtaque.style.display = 'block'
+
     let inputHerbolestero = document.getElementById('Herbolestero')
     let inputMonje = document.getElementById('Monje')
     let inputCataclismo = document.getElementById('Cataclismo')
@@ -209,6 +227,9 @@ function crearMensaje(resultado){
     sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
 }
 function crearMensajeFinal(resultadoFinal){
+    let sectionSeleccionarAtaque = document.getElementById('reiniciar')
+    sectionSeleccionarAtaque.style.display = 'block'
+
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')  //creamos un nuevo parrafo
     parrafo.innerHTML = resultadoFinal

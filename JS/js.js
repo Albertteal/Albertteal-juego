@@ -3,7 +3,6 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
-<<<<<<< HEAD
 function ClaseSeleccionada(){
     let botonFuego = document.getElementById('boton-ataque-fuego')
     botonFuego.disabled = true
@@ -13,16 +12,6 @@ function ClaseSeleccionada(){
     botonAire.disabled = true
     let botontierra = document.getElementById('boton-ataque-tierra')
     botontierra.disabled = true
-=======
-
-function iniciarJuego(){
-    let sectionSeleccionarAtaque = document.getElementById('reiniciar')
-    sectionSeleccionarAtaque.style.display = 'none'
-    
-    let sectionBotonReiniciar = document.getElementById('Ataque')
-    sectionSeleccionarAtaque.style.display = 'none'
-
->>>>>>> BloqueoDeBotones
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
     botonClaseJugador.addEventListener('click', iniciarJuego)

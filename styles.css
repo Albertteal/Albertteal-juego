@@ -1,3 +1,24 @@
-h1{
-    color:rgb(214, 184, 86);
+.titulo{ 
+    font-family: fantasy;
+    color:rgb(212, 66, 66);
+    width: 307px;
+    height: 42px;
+    background-color: rgb(238, 213, 202);
+    
+}
+
+label {
+   
+}
+
+input{
+    background-color: rgb(63, 8, 22);
+    width: 54px;
+    height: 22px;
+}
+
+button{
+    background-color: salmon;
+    width: 82px;
+    height: 23px;
 }
